@@ -1,7 +1,8 @@
-Name =  input("What is your name? ")
+print("Welcome to Band Name Generator")
 
-print("Hello " + Name)
+City_Name = input("What is the name of your city?\n")
+Pet_Name = input(" What kind of animal is your pet? \n")
 
-Length = len(Name)
+Band_name = City_Name + " " + Pet_Name + "!"
 
-print(" your name has " + str(Length) + " characters" )
+print('The name of your band is ' + Band_name)
