@@ -47,3 +47,30 @@
 #     print('Not Leap')
 
 #######################################################################
+
+# Pizza Order
+
+# print('Welcome to Code Pizza')
+
+
+# size = input("Which size of Pizza:\n 'S', 'M', 'L': \n ").lower()
+# add_pepperoni = input("Do you want Pepperoni? 'Y','N'\n").lower()
+# add_cheese = input("Do you want Pepperoni? 'Y','N'\n").lower()
+
+# if size == str('s'):
+#     bill = 15
+# elif size == str('m'):
+#     bill = 20
+# elif size == str('l'):
+#     bill = 25
+
+# if add_pepperoni == str('y'):
+#     if size == str('s'):
+#         bill += 2
+#     else:
+#         bill += 3
+
+# if add_cheese == str('y'):
+#     bill += 1
+
+# print(f"Your final bill is: ${bill}")   
