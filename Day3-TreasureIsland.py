@@ -74,3 +74,68 @@
 #     bill += 1
 
 # print(f"Your final bill is: ${bill}")   
+
+
+#####################################################################3
+# Love Calculator
+
+# print("Welcome to the Love Calculator")
+
+# name1 = input("What is your name? \n").lower()
+# name2 = input("What is their name? \n").lower() 
+# combined_names = name1 + name2
+# true_count = combined_names.count('t') + combined_names.count('r') + combined_names.count('u') + combined_names.count('e')
+# love_count = combined_names.count('l') + combined_names.count('o') + combined_names.count('v') + combined_names.count('e')
+# love_score = int(str(true_count) + str(love_count))
+
+# t_count = combined_names.count('t')
+# r_count = combined_names.count('r')
+# u_count = combined_names.count('u')
+# e_count = combined_names.count('e') 
+
+# l_count = combined_names.count('l')
+# o_count = combined_names.count('o')
+# v_count = combined_names.count('v')
+# e_count = combined_names.count('e')
+
+# print(f"Count of 't': {t_count}")
+# print(f"Count of 'r': {r_count}")
+# print(f"Count of 'u': {u_count}")          
+# print(f"Count of 'e': {e_count}")
+# print(f"Count of 'l': {l_count}")
+# print(f"Count of 'o': {o_count}")
+# print(f"Count of 'v': {v_count}")
+# print(f"Count of 'e': {e_count}")   
+
+
+# if love_score < 10 or love_score > 90:
+#     print(f"Your score is {love_score}, you go together like coke and mentos.")
+# elif love_score >= 40 and love_score <= 50:
+#     print(f"Your score is {love_score}, you are alright together.")
+# else:    print(f"Your score is {love_score}.")  
+
+
+##############################################################################
+
+# Treasure Island
+
+print("Welcome to Treasure Island.Your mission is to find the treasure")
+
+Starter = input(" Choose your path: \n Left or Right ").lower()
+
+if Starter == "right":
+    choice = input("You are infront of a lake what do you? \n A: Swim \n B: Wait for the boat ").lower()
+    if choice == "b":
+        door = input("You are ashore choose 'Red Door' , 'Blue Door', or 'Green Door'").lower()
+        if door == "blue door":
+            print('Congrats you found the one piece')
+        elif door == "green door":
+            print('You got caught in a gengitsu. Game Over')
+        elif door == 'red door':
+            print('You had to fight Brock Lesnar! Game Over')
+        else:
+            print('You got killed by Edward Black Beard Teach')
+    else:
+        print("Game Over! You got eaten by a crocodile")
+else:
+    print("You fell into a pit! Try Again")
