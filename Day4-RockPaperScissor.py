@@ -13,31 +13,26 @@ import random
 
 ###############################################3333
 # RPS - Version 1
+
 import random
 
-# List of choices with proper formatting
-choices = ["Rock", "Paper", "Scissors"]
+Game_Names = ["Rock", "Paper", "Scissors"]
+computer_choice = random.randint(1,3)
+print("Welcome to Rock, Paper, Scissors")
+Player = input("Enter Your Name: \n")
+player_choice =  int(input("Choose '1: for Rock, 2: for Paper, 3: for Scissors:\n'"))
 
-print('Welcome to the RPC game')
-player = input("What is your name? \n:: ")
-print(f"Hello {player}, let's play Rock, Paper, Scissors!")
 
-# Get player's choice
-player_input = int(input("Select: \n '1' for rock \n '2' for paper \n '3' for scissors'\n:: "))
-player_choice_name = choices[player_input - 1]
-
-# Get computer's choice
-computer_options = ["1", "2", "3"]
-computer_choice_num = int(random.choice(computer_options))
-computer_choice_name = choices[computer_choice_num - 1]
-
-if player_input == computer_choice_num:
-    print(f"It's a tie:\n {player} chose {player_choice_name} and Computer chose {computer_choice_name}")
-elif player_input == 1 and computer_choice_num == 3:
-    print(f"Player Won:\n {player} chose {player_choice_name} and Computer chose {computer_choice_name}")
-elif player_input == 2 and computer_choice_num == 1:
-    print(f"Player Won:\n {player} chose {player_choice_name} and Computer chose {computer_choice_name}")
-elif player_input == 3 and computer_choice_num == 2:
-    print(f"Player Won:\n {player} chose {player_choice_name} and Computer chose {computer_choice_name}")
+if player_choice < 1 or player_choice > 3:
+     print("Wrong Input! Game Over!")
 else:
-    print(f"Computer Won:\n {player} chose {player_choice_name} and Computer chose {computer_choice_name}")
+    if player_choice == computer_choice:
+        print(f"You both chose {Game_Names[player_choice -1]} It's a Tie")
+    elif player_choice == 1 and computer_choice == 3:
+        print(f"{Player} Wins: {Player} Chose: {Game_Names[player_choice -1]} and Computer Chose: {Game_Names[computer_choice - 1]}!")
+    elif player_choice == 2 and computer_choice == 1:
+        print(f"{Player} Wins: {Player} Chose: {Game_Names[player_choice -1]} and Computer Chose: {Game_Names[computer_choice - 1]}!")
+    elif player_choice == 3 and computer_choice == 2:
+        print(f"{Player} Wins: {Player} Chose: {Game_Names[player_choice -1]} and Computer Chose: {Game_Names[computer_choice - 1]}")
+    else:
+        print(f"Computer Wins: Computer Chose: {Game_Names[computer_choice - 1]} and {Player} Chose: {Game_Names[player_choice -1]}!")
