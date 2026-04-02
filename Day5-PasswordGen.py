@@ -25,15 +25,27 @@ import random
 letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 numbers = '0123456789'
 symbols = '!#$%&()*+'
-print("Welcome to the PyPassword Generator!")
+print("Welcome to the Password Generator!")
 nr_letters= int(input("How many letters would you like in your password?\n"))
 nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
-password = ''
+password_num = ''
+password_sym = ''
+password_let = ''
 for char in range(1, nr_letters + 1):
-    password += random.choice(letters)
+    password_let += random.choice(letters)
 for char in range(1, nr_symbols + 1):
-    password += random.choice(symbols)
+    password_sym += random.choice(symbols)
 for char in range(1, nr_numbers + 1):
-    password += random.choice(numbers)
-print(f"Your password is: {password}")  
+    password_num += random.choice(numbers)
+
+passw = (password_num + password_sym + password_let)  
+print(f"your password is {passw}")
+
+# shuffle requires a list
+strong_pass_list = list(passw)
+random.shuffle(strong_pass_list)
+# join the list back to a string
+strong_pass = ''.join(strong_pass_list)
+
+print(f"your shuffled (strong) password is {strong_pass}")
