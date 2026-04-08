@@ -22,11 +22,11 @@ while life > 0 and "_" in current_display:
     if player_input in selected_word:
         # Update the display with the correct letter
         new_display = ''
-        for i in range(len(selected_word)):
-            if selected_word[i] == player_input:
+        for string in range(len(selected_word)):
+            if selected_word[string] == player_input:
                 new_display += player_input
             else:
-                new_display += current_display[i]
+                new_display += current_display[string]
         current_display = new_display
         print(f"\nGood guess! {current_display}")
     else:
