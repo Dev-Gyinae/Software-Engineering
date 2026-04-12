@@ -1,0 +1,14 @@
+Mem Caching
+
+To Do
+1. Install Redis on homelab - dockerized
+2. explore Redis-CLI
+
+set name <name>
+get name 
+
+set email <email>
+get email
+
+
+Dockerized Redis
